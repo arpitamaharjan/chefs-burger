@@ -405,55 +405,48 @@ p {
 }
 .menulist-section .nav {
   flex: 0 0 25%;
-}
-.menulist-section [class*=col]:nth-child(2) {
-  padding: 0;
-}
-.menulist-section .menu-list-item {
   position: relative;
   background-color: #fff;
   padding: 75px 0 160px;
   margin-top: -50px;
+  margin-right: 9px;
 }
-.menulist-section .menu-list-item .section-title {
+.menulist-section .nav .section-title {
   padding-bottom: 85px;
 }
-.menulist-section .menu-list-item .section-title small {
+.menulist-section .nav .section-title small {
   color: #666666;
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-top: 15px;
   display: block;
 }
-.menulist-section .menu-list-item .section-title h3 {
+.menulist-section .nav .section-title h3 {
   font-weight: 400;
   margin-top: 25px;
   margin-bottom: 15px;
 }
-.menulist-section .menu-list-item ul {
-  margin: 0;
-  padding: 0;
-}
-.menulist-section .menu-list-item ul li {
-  margin-top: 40px;
-  margin-bottom: 25px;
-  list-style: none;
-}
-.menulist-section .menu-list-item ul li a {
+.menulist-section .nav .nav-link {
+  color: #333;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  text-decoration: none;
-  color: #333;
-}
-.menulist-section .menu-list-item ul li.active a {
-  color: #999966;
-}
-.menulist-section .menu-list-img [class*=col] {
+  margin-top: 40px;
+  margin-bottom: 25px;
   padding: 0;
 }
-.menulist-section .menu-list-img .menu-item {
+.menulist-section .nav .nav-link.active {
+  background-color: transparent;
+  color: #999966;
+}
+.menulist-section .tab-content .tab-pane .menu-list-img [class*=col] {
+  padding: 0;
+}
+.menulist-section .tab-content .tab-pane .menu-list-img [class*=col]:first-child {
+  padding-left: 0;
+}
+.menulist-section .tab-content .tab-pane .menu-list-img .menu-item {
   margin: 3px;
   margin-right: 0;
   margin-bottom: 0;
@@ -461,19 +454,19 @@ p {
   position: relative;
   z-index: 1;
 }
-.menulist-section .menu-list-img .menu-item:hover {
+.menulist-section .tab-content .tab-pane .menu-list-img .menu-item:hover {
   box-shadow: 0 0 0 3px #cc9933;
 }
-.menulist-section .menu-list-img .menu-item:hover .item-info {
+.menulist-section .tab-content .tab-pane .menu-list-img .menu-item:hover .item-info {
   transform: translateY(0);
   bottom: 10%;
   opacity: 1;
   visibility: visible;
 }
-.menulist-section .menu-list-img .menu-item a {
+.menulist-section .tab-content .tab-pane .menu-list-img .menu-item a {
   text-decoration: none;
 }
-.menulist-section .menu-list-img .menu-item .item-info {
+.menulist-section .tab-content .tab-pane .menu-list-img .menu-item .item-info {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -483,7 +476,7 @@ p {
   opacity: 0;
   visibility: hidden;
 }
-.menulist-section .menu-list-img .menu-item .item-info span.cart-btn {
+.menulist-section .tab-content .tab-pane .menu-list-img .menu-item .item-info span.cart-btn {
   font-size: 12px;
   font-weight: 600;
   padding: 16px 22px;
@@ -493,27 +486,27 @@ p {
   letter-spacing: 1px;
   border-radius: 0;
 }
-.menulist-section .menu-list-img .menu-item .item-info span.cart-btn:hover {
+.menulist-section .tab-content .tab-pane .menu-list-img .menu-item .item-info span.cart-btn:hover {
   border-color: #fff;
   color: #fff;
 }
-.menulist-section .menu-list-img .menu-item .item-info h6 {
+.menulist-section .tab-content .tab-pane .menu-list-img .menu-item .item-info h6 {
   padding: 20px 0 10px;
   margin-bottom: 0;
   color: #fff;
   font-size: 18px;
 }
-.menulist-section .menu-list-img .menu-item .item-info span.price {
+.menulist-section .tab-content .tab-pane .menu-list-img .menu-item .item-info span.price {
   font-weight: bold;
   color: #cc9933;
   display: block;
 }
-.menulist-section .menu-list-img .next-btn {
+.menulist-section .tab-content .tab-pane .menu-list-img .next-btn {
   background-color: #fff;
   height: 338px;
   position: relative;
 }
-.menulist-section .menu-list-img .next-btn a {
+.menulist-section .tab-content .tab-pane .menu-list-img .next-btn a {
   font-size: 36px;
   font-weight: 600;
   text-decoration: none;
@@ -524,7 +517,7 @@ p {
   transform: translate(-50%, -50%);
   text-transform: uppercase;
 }
-.menulist-section .menu-list-img .next-btn a i.fa-angle-right {
+.menulist-section .tab-content .tab-pane .menu-list-img .next-btn a i.fa-angle-right {
   position: absolute;
   bottom: -25px;
   right: -30px;
@@ -533,10 +526,10 @@ p {
   transform: rotate(45deg);
   transition: 0.2s ease-in-out;
 }
-.menulist-section .menu-list-img .next-btn a i.fa-angle-right:hover {
+.menulist-section .tab-content .tab-pane .menu-list-img .next-btn a i.fa-angle-right:hover {
   right: -40px;
 }
-.menulist-section .menu-list-img .next-btn a i.fa-angle-left {
+.menulist-section .tab-content .tab-pane .menu-list-img .next-btn a i.fa-angle-left {
   position: absolute;
   top: -25px;
   left: -30px;
@@ -545,7 +538,7 @@ p {
   transform: rotate(45deg);
   transition: 0.2s ease-in-out;
 }
-.menulist-section .menu-list-img .next-btn a i.fa-angle-left:hover {
+.menulist-section .tab-content .tab-pane .menu-list-img .next-btn a i.fa-angle-left:hover {
   left: -40px;
 }
 
@@ -553,14 +546,44 @@ p {
   padding: 120px 0 135px;
   background-color: #efefef;
 }
-.testimonial-section .slide-item .content {
-  padding: 0 230px;
+.testimonial-section .item .content {
+  padding: 0 200px;
 }
-.testimonial-section .slide-item .content p {
+.testimonial-section .item .content p {
   font-family: "Playfair Display", serif;
   font-size: 24px;
   margin-bottom: 20px;
   line-height: 29px;
+}
+.testimonial-section .item .content span img {
+  width: auto !important;
+  margin: auto;
+}
+.testimonial-section .item .content small {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #333;
+  margin: 30px 0 10px;
+  display: block;
+}
+.testimonial-section .owl-nav button:hover {
+  background: transparent !important;
+  color: #333 !important;
+  outline: 0;
+}
+.testimonial-section .owl-nav button.owl-next {
+  position: absolute;
+  top: 0;
+  right: 14%;
+  font-size: 40px !important;
+}
+.testimonial-section .owl-nav button.owl-prev {
+  position: absolute;
+  top: 0;
+  left: 14%;
+  font-size: 40px !important;
 }
 
 .reservation-map [class*=col] {
