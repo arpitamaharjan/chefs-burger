@@ -15,16 +15,22 @@ $(document).ready(function(){
         dots: true
     });
 
-   $('.testimonial-slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false
-    });
-
-    /*$('.review-slider').slick({
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: false
-      });*/
+    $('.testimonial-slider').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:1
+            }
+        }
+    })
 
 });
