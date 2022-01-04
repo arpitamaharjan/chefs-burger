@@ -9,10 +9,22 @@ $(document).ready(function(){
         }
     });
 
-    /*$('.slider').slick({
+    $('.slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true
+    });
+
+   $('.testimonial-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false
-    });*/
+    });
+
+    /*$('.review-slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false
+      });*/
 
 });
