@@ -8,6 +8,10 @@ $(document).ready(function(){
             $('.nav-bar').removeClass('sticky')
         }
     });
+    
+    $('.ham-wrap'). click (function(){
+        $('.navbar').toggleClass('mobile-menu-open');
+    });
 
     $('.slider').slick({
         slidesToShow: 1,
@@ -24,8 +28,8 @@ $(document).ready(function(){
             0:{
                 items:1
             },
-            600:{
-                items:3
+            992:{
+                items:2
             },
             1000:{
                 items:1
