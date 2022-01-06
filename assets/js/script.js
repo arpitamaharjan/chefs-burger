@@ -1,16 +1,26 @@
 
 $(document).ready(function(){
 
-	$(window).scroll(function(){
-        if($(this).scrollTop() > 100){
-            $('.nav-bar').addClass('sticky')
-        } else{
-            $('.nav-bar').removeClass('sticky')
-        }
+    $('.ham-wrap'). click (function(){
+        $('.header').toggleClass('mobile-menu-open');
     });
     
-    $('.ham-wrap'). click (function(){
-        $('.navbar').toggleClass('mobile-menu-open');
+    $(window).on('load', function(){
+        var winWidth = $(window).width();
+        console.log(winWidth);
+        if(winWidth < 1025) {
+            $('.submenu > a').on('click', function(){
+            $(this).parent().toggleClass('active');
+            })
+        }
+    });
+
+	$(window).scroll(function(){
+        if($(this).scrollTop() > 100){
+            $('.header').addClass('sticky')
+        } else{
+            $('.header').removeClass('sticky')
+        }
     });
 
     $('.slider').slick({
