@@ -7,7 +7,6 @@ $(document).ready(function(){
     
     $(window).on('load', function(){
         var winWidth = $(window).width();
-        console.log(winWidth);
         if(winWidth < 1025) {
             $('.submenu > a').on('click', function(){
             $(this).parent().toggleClass('active');
@@ -33,15 +32,16 @@ $(document).ready(function(){
         loop:true,
         margin:10,
         nav:true,
+        navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
         dots:false,
         responsive:{
             0:{
                 items:1
             },
             992:{
-                items:2
+                items:1
             },
-            1000:{
+            1024:{
                 items:1
             }
         }
